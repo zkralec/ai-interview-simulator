@@ -1,5 +1,6 @@
 # AI Interview PlatformAdd commentMore actions
 An AI‑powered behavioral interviewer built with React, Tailwind, and Node. The app guides users through a simulated job interview by asking questions, recording responses (both text and voice), and providing constructive feedback. It uses the OpenAI API (gpt‑4o‑mini) to generate context‑aware questions and actionable feedback, making it an ideal practice tool for polishing interview skills.
+The server trims the model response, removes surrounding JSON code fences, and attempts to parse it as JSON. If parsing fails, it splits the response at “New question:” to construct the feedback and question; when that section is missing, it uses a default question.
 
 Steps to run:
 1. (In the terminal) cd into server folder.
